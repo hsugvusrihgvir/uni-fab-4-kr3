@@ -1,0 +1,16 @@
+{
+  "name": "fab_kr3",
+  "version": "1.0.0",
+  "description": "PWA notes app for practices 13-18",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "node server.js"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3",
+    "web-push": "^3.6.7"
+  }
+}

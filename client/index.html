@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- практика 14 -->
+  <link rel="manifest" href="/manifest.json?v=11">
+  <meta name="theme-color" content="#8ac7de">
+  <!-- для мобильной интеграции -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png?v=11">
+  <link rel="icon" href="/icons/icon-64.png?v=11" type="image/png">
+
+  <title>Заметки</title>
+  <link rel="stylesheet" href="/style.css?v=15">
+</head>
+<body>
+  <!-- практика 15-->
+  <header class="app-header">
+    <div>
+      <h1>Заметки</h1>
+    </div>
+
+    <nav class="app-nav" aria-label="Основная навигация">
+      <a href="/content/home.html?v=15" data-link>Заметки</a>
+      <a href="/content/about.html?v=15" data-link>О приложении</a>
+    </nav>
+  </header>
+
+  <main id="app" class="app-content">
+    <p class="loading">Загружаю заметки...</p>
+  </main>
+
+  <!-- практика 16 (всплывающее сообщение из другой вкладки) -->
+  <div class="toast-box" id="toast-box" aria-live="polite"></div>
+
+  <!-- Socket.IO приходит с сервера-->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js?v=15"></script>
+</body>
+</html>

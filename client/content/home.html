@@ -1,0 +1,50 @@
+<section class="home-layout">
+  <section class="notes-page">
+    <section class="notes-area add-area">
+      <div class="section-title">
+        <h2>Новая заметка</h2>
+      </div>
+
+      <!-- форма заметки -->
+      <form id="note-form" class="note-form">
+        <label for="note-input">Текст заметки</label>
+        <div class="form-line">
+          <input type="text" id="note-input" placeholder="Например: купить тетрадь" required>
+          <button type="submit">Добавить</button>
+        </div>
+      </form>
+
+      <!-- отдельная форма для напоминаний -->
+      <form id="reminder-form" class="note-form reminder-form">
+        <label for="reminder-text">Заметка с напоминанием</label>
+        <div class="form-line reminder-line">
+          <input type="text" id="reminder-text" placeholder="Что напомнить" required>
+          <input type="datetime-local" id="reminder-time" required>
+          <button type="submit">Добавить</button>
+        </div>
+      </form>
+
+      <!-- кнопки подписки и отписки от push уведомлений -->
+      <div class="push-row">
+        <button id="enable-push" type="button">Включить уведомления</button>
+        <button id="disable-push" type="button" hidden>Отключить уведомления</button>
+        <span id="push-status">Уведомления выключены</span>
+      </div>
+    </section>
+
+    <section class="notes-area list-area">
+      <div class="section-title">
+        <h2>Список заметок</h2>
+      </div>
+
+      <!-- список заметок заполняется из localStorage -->
+      <ul id="notes-list" class="notes-list"></ul>
+    </section>
+  </section>
+
+  <aside class="bottom-img" aria-label="Декоративные картинки">
+
+    <img class="dream-image" src="/assets/images/1.png" alt="Мягкая голубая картинка для настроения">
+    <img class="dream-image img-2" src="/assets/images/2.png" alt="Мягкая розовая картинка для настроения">
+  </aside>
+</section>
